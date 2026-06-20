@@ -1,0 +1,142 @@
+.timeline-section {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.timeline-center-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, 
+    transparent, 
+    var(--neon-red), 
+    var(--electric-blue), 
+    var(--purple),
+    transparent
+  );
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.timeline-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.timeline-row:last-child {
+  margin-bottom: 0;
+}
+
+.row-left {
+  flex-direction: row;
+}
+
+.row-right {
+  flex-direction: row-reverse;
+}
+
+.timeline-spacer {
+  width: calc(50% - 30px);
+}
+
+.timeline-node-container {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.timeline-node {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 2px solid var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.timeline-card-wrapper {
+  width: calc(50% - 30px);
+}
+
+.timeline-card {
+  padding: 30px;
+  border-radius: var(--radius-md);
+  position: relative;
+  transition: all var(--transition-base);
+  border-top: 2px solid transparent;
+}
+
+.timeline-card:hover {
+  transform: translateY(-5px);
+  border-top-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 20px 20px -20px var(--accent);
+}
+
+.timeline-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.timeline-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: var(--text-primary);
+}
+
+.timeline-description {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .timeline-center-line {
+    left: 20px;
+  }
+  
+  .timeline-row {
+    flex-direction: row !important;
+    justify-content: flex-start;
+  }
+  
+  .desktop-only {
+    display: none;
+  }
+  
+  .timeline-node-container {
+    width: 40px;
+    margin-right: 20px;
+  }
+  
+  .timeline-card-wrapper {
+    width: calc(100% - 60px);
+  }
+  
+  .timeline-node {
+    width: 24px;
+    height: 24px;
+    font-size: 0.7rem;
+  }
+}
