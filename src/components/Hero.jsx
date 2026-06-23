@@ -48,6 +48,7 @@ const Hero = () => {
             <div className="status-dot"></div>
             <span className="status-text">Available for collaboration</span>
           </motion.div>
+          {/* collaboration  */}
 
           <h1 className="hero-name">
             {nameChars.map((char, index) => (
