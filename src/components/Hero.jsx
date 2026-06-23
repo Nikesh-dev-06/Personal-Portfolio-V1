@@ -155,7 +155,7 @@ const Hero = () => {
       <div className="hero-scroll-indicator">
         <motion.div 
           className="mouse"
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 3, duration: 1 }}
         >
